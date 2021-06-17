@@ -37,7 +37,7 @@
         if (succeeded) {
             NSLog(@"The message was saved!");
             self.messageTextField.text = @"";
-            [self.arrayOfMessages addObject:chatMessage];
+            [self.arrayOfMessages insertObject:chatMessage atIndex:0];
             [self.tableView reloadData];
         } else {
             NSLog(@"Problem saving message: %@", error.localizedDescription);
